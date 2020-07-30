@@ -1,11 +1,38 @@
 {
+  "main": "index.js",
+  "author": "shimahi",
+  "license": "MIT",
+  "scripts": {
+    "start": "vercel dev --listen 4000",
+    "lint": "eslint 'api/**/*.{js,ts}' --fix"
+  },
   "dependencies": {
-    "@vercel/node": "^1.7.4",
-    "express": "^4.17.1"
+    "@vercel/node": "^1.7.4"
   },
   "devDependencies": {
     "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "vercel": "^19.2.0"
+  },
+  "lint-staged": {
+    "api/**/*.{js,ts}": [
+      "eslint 'api/**/*.{js,ts}' --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

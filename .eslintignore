@@ -1,0 +1,4 @@
+node_modules/
+types/graphql.ts
+*.config.js
+.eslintrc.js
