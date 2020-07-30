@@ -3,7 +3,6 @@ https://node-function-for-vercel.vercel.app/api/index.ts
 
 Vercel上で起動するAPIサーバー（サーバーレス関数）のテスト  
 
-APIサーバをローカルで動作させるには、Vercel CLIでデプロイ先を指定した上で `vercel dev` を実行するとローカル上でも動作する。  
 Next.jsでは`pages/api/`にコードを置き、Next.jsサーバを起動するとAPIも動作するが、  
 素のAPIでは `api/`にコードを置き、*Vercel CLIでデプロイ先を指定した上で `vercel dev`を実行する*ことでローカル上でAPIサーバを起動させることができる。
 
