@@ -3,6 +3,7 @@ import { ApolloServer, gql } from 'apollo-server-micro'
 const typeDefs = gql`
   type Query {
     members: [Member!]!
+    execute: String
   }
 
   type Member {
@@ -39,6 +40,9 @@ const resolvers = {
         random: Math.floor(Math.random() * 10),
       },
     ],
+    execute: () => {
+      console.log('うおおお')
+    },
   },
 }
 
